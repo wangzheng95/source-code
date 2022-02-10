@@ -135,7 +135,7 @@ function resolvePromise(promise2,x,resolve,reject){
 Promise.resolve = (value) => {
   if(value instanceof Promise){
     return value
-  }else if(value instanceof Object && 'then' in value && typeof value.then === 'function){
+  }else if(value instanceof Object && 'then' in value && typeof value.then === 'function'){
     return new Promise((resolve,reject) => {
       data.then(resolve,reject)
     })
